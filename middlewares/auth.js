@@ -11,7 +11,7 @@ exports.auth = (req,res, next) => {
 
         console.log("cookie" , req.cookies.token);
         console.log("body" , req.body.token);
-        console.log("header", req.header("Authorization"));
+        console.log("header", req.header("Authorization")); 
        
         const token = req.cookies.token || req.body.token || req.header("Authorization").replace("Bearer ", "");
         
